@@ -103,7 +103,7 @@
 
 	/* main body edits for visual */
         body {
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+	    	font-family: "College", "Georgia", "Times New Roman", serif;
             color: var(--color-dark);
             background: var(--color-dark);
             line-height: 1.6;
