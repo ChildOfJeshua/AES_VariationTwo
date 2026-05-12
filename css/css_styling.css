@@ -103,7 +103,7 @@
 
 	/* main body edits for visual */
         body {
-	    	font-family: "College", "Georgia", "Times New Roman", serif;
+	    font-family: "College", "Georgia", "Times New Roman", serif;
             color: var(--color-dark);
             background: var(--color-dark);
             line-height: 1.6;
@@ -365,26 +365,10 @@
             
             nav ul {
                 flex-direction: column;
-				padding: 0;
-				margin: 0;
-				list-style: none;
             }
-
-			nav li {
-				width: 100%;
-				margin: 8px 0;
-			}
-			
+            
             nav a {
                 text-align: center;
-				display: block;
-				padding: 12px;
-				width: 100%;
-				box-sizing: border-box;
-				background-color: #f4f4f4;
-				border-radius: 4px;
-				text-decoration: none;
-				color: inherit;
             }
             
             .content-grid {
