@@ -344,35 +344,70 @@
 		filter: brightness(1.2);
 	}
         
-	/* Mobile Device Specifics */
+/* Hide the checkbox */
+.nav-toggle {
+    display: none;
+}
 
-        @media (max-width: 768px) {
-            header h1 {
-                font-size: 2rem;
-            }
-            
-            header p {
-                font-size: 1.1rem;
-            }
-            
-            .hero-section {
-                padding: 40px 20px;
-            }
-            
-            .hero-section h2 {
-                font-size: 1.7rem;
-            }
-            
-            nav ul {
-                flex-direction: column;
-            }
-            
-            nav a {
-                text-align: center;
-            }
-            
-            .content-grid {
-                grid-template-columns: 1fr;
-            }
-	
+/* Style the hamburger label (only show on mobile) */
+@media (max-width: 768px) {
+    .nav-label {
+        display: block;
+        font-size: 1.5rem;
+        cursor: pointer;
+        padding: 10px;
+        text-align: right;
+        /* Optional: match your header background */
+        background: #333; 
+        color: white; 
+    }
+
+    /* Hide the label on larger screens */
+    @media (min-width: 769px) {
+        .nav-label {
+            display: none;
         }
+    }
+
+    /* Hide the menu by default on mobile */
+    nav ul {
+        flex-direction: column;
+        display: none; /* Hidden initially */
+        width: 100%;
+        padding: 0;
+        margin: 0;
+        list-style: none;
+        background: #f4f4f4; /* Menu background */
+    }
+
+    /* Show the menu when checkbox is checked */
+    .nav-toggle:checked ~ nav ul {
+        display: flex;
+    }
+
+    /* Style the links */
+    nav li {
+        width: 100%;
+        margin: 0;
+    }
+
+    nav a {
+        display: block;
+        padding: 15px;
+        text-align: center;
+        text-decoration: none;
+        color: #333;
+        border-bottom: 1px solid #ddd;
+    }
+    
+    nav a:hover {
+        background: #e0e0e0;
+    }
+
+    /* Your existing styles */
+    header h1 { font-size: 2rem; }
+    header p { font-size: 1.1rem; }
+    .hero-section { padding: 40px 20px; }
+    .hero-section h2 { font-size: 1.7rem; }
+    .content-grid { grid-template-columns: 1fr; }
+}
