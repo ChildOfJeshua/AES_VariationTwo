@@ -1,3 +1,6 @@
+		.mobile-toggle {
+			display: none;
+		}
 	/* Applies uniform resetting clean up to all elements */
         * {
             margin: 0;
@@ -345,11 +348,16 @@
 	}
         
 	/* Mobile Device Specifics */
-@media (max-width: 768px) {
+@media (max-width: 768px) 
+{
     
     /* 1. Hide the button on Desktop */
-    @media (min-width: 769px) {
-        .mobile-toggle { display: none; }
+    @media (min-width: 769px) 
+	{
+        .mobile-toggle 
+			{ 
+				display: none 
+			}
     }
 
     /* 2. Style the Hamburger Button */
