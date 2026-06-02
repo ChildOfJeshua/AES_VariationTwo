@@ -363,9 +363,33 @@ footer a:hover {
     }
 
     /* 6. OTHER MOBILE ADJUSTMENTS */
-    header h1 { font-size: 2rem; }
-    header p { font-size: 1.1rem; }
-    .hero-section { padding: 40px 20px; }
-    .hero-section h2 { font-size: 1.7rem; }
-    .content-grid { grid-template-columns: 1fr; }
+    header h1 
+        { 
+            font-size: 3.5rem;
+            line-height: 1.1; 
+        }
+    header p 
+        { 
+            font-size: 3.2rem; 
+            line-height: 1.2;
+            margin-bottom: 10px;
+        }
+
+    .tagline {
+        font-size: 1.1rem;
+        margin-top: 15px;
+    }
+    
+    .hero-section 
+        { 
+            padding: 40px 20px; 
+        }
+    .hero-section h2 
+        { 
+            font-size: 2.2rem; 
+        }
+    .content-grid 
+        { 
+            grid-template-columns: 1fr; 
+        }
 }
