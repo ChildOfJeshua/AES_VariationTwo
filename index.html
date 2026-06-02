@@ -25,7 +25,6 @@
 
     <!-- Navigation -->
     <nav>
-		<input type="checkbox" id="nav-toggle" class="nav-toggle">
         <ul>
             <li><a href="index.html"> HOME </a></li>
             <li><a href="pages/about.html"> ABOUT </a></li>
@@ -144,16 +143,6 @@
         </p>
     </footer>
 
-<script>
-  const btn = document.getElementById('menu-btn');
-  const navList = document.querySelector('nav ul');
-
-  btn.addEventListener('click', () => {
-    navList.classList.toggle('active');
-    // Toggle icon between ☰ and ✖
-    btn.innerHTML = navList.classList.contains('active') ? '✖' : '☰';
-  });
-</script>
 </body>
 
 </html>
