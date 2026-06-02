@@ -145,19 +145,13 @@
     </footer>
 
 <script>
-  const toggleBtn = document.querySelector('.nav-toggle-btn');
+  const btn = document.getElementById('menu-btn');
   const navList = document.querySelector('nav ul');
 
-  toggleBtn.addEventListener('click', () => {
-    // Toggle the 'active' class on the menu
+  btn.addEventListener('click', () => {
     navList.classList.toggle('active');
-    
-    // Change the button icon from ☰ to ✖
-    if (navList.classList.contains('active')) {
-      toggleBtn.innerHTML = '✖';
-    } else {
-      toggleBtn.innerHTML = '☰';
-    }
+    // Toggle icon between ☰ and ✖
+    btn.innerHTML = navList.classList.contains('active') ? '✖' : '☰';
   });
 </script>
 </body>
