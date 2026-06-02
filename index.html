@@ -144,6 +144,24 @@
         </p>
     </footer>
 
+<script>
+  // Select the button and the menu list
+  const menuBtn = document.getElementById('mobile-menu-btn');
+  const navList = document.querySelector('nav ul');
+
+  // Add click event to toggle menu
+  menuBtn.addEventListener('click', () => {
+    // Toggle the 'active' class on the menu
+    navList.classList.toggle('active');
+    
+    // Change icon from ☰ to ✖ (or back)
+    if (navList.classList.contains('active')) {
+      menuBtn.innerHTML = '✖';
+    } else {
+      menuBtn.innerHTML = '☰';
+    }
+  });
+</script>
 </body>
 
 </html>
