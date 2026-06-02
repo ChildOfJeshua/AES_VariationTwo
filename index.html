@@ -144,6 +144,22 @@
         </p>
     </footer>
 
+<script>
+  const toggleBtn = document.querySelector('.nav-toggle-btn');
+  const navList = document.querySelector('nav ul');
+
+  toggleBtn.addEventListener('click', () => {
+    // Toggle the 'active' class on the menu
+    navList.classList.toggle('active');
+    
+    // Change the button icon from ☰ to ✖
+    if (navList.classList.contains('active')) {
+      toggleBtn.innerHTML = '✖';
+    } else {
+      toggleBtn.innerHTML = '☰';
+    }
+  });
+</script>
 </body>
 
 </html>
