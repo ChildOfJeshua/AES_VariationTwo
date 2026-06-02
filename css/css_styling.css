@@ -345,34 +345,82 @@
 	}
         
 	/* Mobile Device Specifics */
+@media (max-width: 768px) {
+    
+    /* 1. Hide the button on Desktop */
+    @media (min-width: 769px) {
+        .mobile-toggle { display: none; }
+    }
 
-        @media (max-width: 768px) {
-            header h1 {
-                font-size: 2rem;
-            }
-            
-            header p {
-                font-size: 1.1rem;
-            }
-            
-            .hero-section {
-                padding: 40px 20px;
-            }
-            
-            .hero-section h2 {
-                font-size: 1.7rem;
-            }
-            
-            nav ul {
-                flex-direction: column;
-            }
-            
-            nav a {
-                text-align: center;
-            }
-            
-            .content-grid {
-                grid-template-columns: 1fr;
-            }
-	
-        }
+    /* 2. Style the Hamburger Button */
+    .mobile-toggle {
+        display: block;
+        position: absolute;
+        top: 15px;
+        right: 20px;
+        background: none;
+        border: none;
+        color: var(--color-light);
+        font-size: 28px;
+        cursor: pointer;
+        z-index: 101;
+        padding: 0;
+        line-height: 1;
+        transition: transform 0.3s;
+    }
+
+    /* 3. Hide the Menu List by default */
+    nav ul {
+        display: none; /* Hidden initially */
+        flex-direction: column;
+        position: absolute;
+        top: 100%; /* Start exactly below the nav bar */
+        left: 0;
+        width: 100%;
+        background: #121212;
+        padding: 0;
+        margin: 0;
+        box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+        z-index: 100;
+        animation: slideDown 0.3s ease;
+        max-height: 80vh; /* Prevents it from getting too tall */
+        overflow-y: auto; /* Adds scroll if menu is too long */
+    }
+
+    /* 4. Show Menu when 'active' class is added */
+    nav ul.active {
+        display: flex;
+    }
+
+    /* 5. Style the Links for Mobile */
+    nav ul li {
+        width: 100%;
+        border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    }
+
+    nav a {
+        display: block;
+        width: 100%;
+        text-align: center;
+        padding: 15px;
+        font-size: 16px;
+        color: var(--color-light);
+    }
+
+    nav a:hover {
+        background-color: var(--color-primary);
+    }
+
+    /* 6. Animation */
+    @keyframes slideDown {
+        from { opacity: 0; transform: translateY(-10px); }
+        to { opacity: 1; transform: translateY(0); }
+    }
+
+    /* 7. Other Mobile Adjustments */
+    header h1 { font-size: 2rem; }
+    header p { font-size: 1.1rem; }
+    .hero-section { padding: 40px 20px; }
+    .hero-section h2 { font-size: 1.7rem; }
+    .content-grid { grid-template-columns: 1fr; }
+}
