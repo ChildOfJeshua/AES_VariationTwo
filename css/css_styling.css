@@ -345,81 +345,34 @@
 	}
         
 	/* Mobile Device Specifics */
-@media (max-width: 768px) {
-    /* 1. Style the Toggle Button */
-    .nav-toggle-btn {
-        display: block !important; /* Force it to show */
-        position: absolute;
-        top: 15px;
-        right: 20px;
-        background: none;
-        border: none;
-        color: var(--color-light);
-        font-size: 2rem;
-        cursor: pointer;
-        z-index: 101;
-        padding: 0;
-        line-height: 1;
-    }
 
-    /* Hide the button on desktop */
-    @media (min-width: 769px) {
-        .menu-btn { display: none; }
-    }
-
-    /* 2. The Menu List (Hidden by default on mobile) */
-    nav ul {
-        display: none; /* HIDDEN! Keeps nav slim */
-        flex-direction: column;
-        position: absolute;
-        top: 100%; /* Starts exactly below the nav bar */
-        left: 0;
-        width: 100%;
-        background: #121212;
-        padding: 0;
-        margin: 0;
-        box-shadow: 0 4px 10px rgba(0,0,0,0.3);
-        z-index: 99; /* Below the button */
-        max-height: 80vh; /* Prevents it from being too tall */
-        overflow-y: auto; /* Scrollable if too many links */
-    }
-
-    /* 3. Show Menu when 'active' class is added */
-    nav ul.active {
-        display: flex;
-        animation: slideDown 0.3s ease;
-    }
-
-    /* 4. Link Styling */
-    nav ul li {
-        width: 100%;
-        border-bottom: 1px solid rgba(255,255,255,0.1);
-    }
-
-    nav a {
-        display: block;
-        width: 100%;
-        text-align: center;
-        padding: 15px;
-        font-size: 16px;
-        color: var(--color-light);
-        text-decoration: none;
-    }
-
-    nav a:hover {
-        background-color: var(--color-primary);
-    }
-
-    /* 5. Animation */
-    @keyframes slideDown {
-        from { opacity: 0; transform: translateY(-10px); }
-        to { opacity: 1; transform: translateY(0); }
-    }
-
-    /* 6. Other Mobile Adjustments */
-    header h1 { font-size: 2rem; }
-    header p { font-size: 1.1rem; }
-    .hero-section { padding: 40px 20px; }
-    .hero-section h2 { font-size: 1.7rem; }
-    .content-grid { grid-template-columns: 1fr; }
-}
+        @media (max-width: 768px) {
+            header h1 {
+                font-size: 2rem;
+            }
+            
+            header p {
+                font-size: 1.1rem;
+            }
+            
+            .hero-section {
+                padding: 40px 20px;
+            }
+            
+            .hero-section h2 {
+                font-size: 1.7rem;
+            }
+            
+            nav ul {
+                flex-direction: column;
+            }
+            
+            nav a {
+                text-align: center;
+            }
+            
+            .content-grid {
+                grid-template-columns: 1fr;
+            }
+	
+        }
