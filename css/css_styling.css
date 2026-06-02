@@ -345,54 +345,106 @@
 	}
         
 	/* Mobile Device Specifics */
+@media (max-width: 768px) {
+    /* 1. Hide the checkbox input */
+    .nav-toggle {
+        display: none;
+    }
 
-        @media (max-width: 768px) {
-            header h1 {
-                font-size: 2rem;
-            }
-            
-            header p {
-                font-size: 1.1rem;
-            }
-            
-            .hero-section {
-                padding: 40px 20px;
-            }
-            
-            .hero-section h2 {
-                font-size: 1.7rem;
-            }
+    /* 2. Create the "Hamburger" button using the label */
+    /* We use a pseudo-element on the label to draw the 3 lines */
+    label[for="nav-toggle"] {
+        display: block;
+        position: absolute;
+        top: 20px;
+        right: 25px;
+        width: 30px;
+        height: 25px;
+        cursor: pointer;
+        z-index: 101;
+    }
 
-			.content-grid {
-                grid-template-columns: 1fr;
-            }
+    /* The 3 lines of the hamburger */
+    label[for="nav-toggle"]::before,
+    label[for="nav-toggle"]::after,
+    label[for="nav-toggle"] span {
+        content: '';
+        position: absolute;
+        width: 100%;
+        height: 3px;
+        background: var(--color-light);
+        border-radius: 2px;
+        transition: 0.3s;
+    }
 
-			nav {
-				width: 100%;
-				padding: 10px 0;
-				box-sizing: border-box;
-			}
+    /* Position the 3 lines */
+    label[for="nav-toggle"]::before { top: 5px; }
+    label[for="nav-toggle"]::after { bottom: 5px; }
+    label[for="nav-toggle"] span { top: 12px; }
 
-			nav ul {
-				width: 100%;
-				max-width: 100%;
-				flex-direction: column; 
-				justify-content: center;
-				padding: 0;
-				margin: 0 auto;
-            }
+    /* Hide the actual label text if it exists */
+    label[for="nav-toggle"] span { display: none; }
 
-			nav a {
-				display: block;
-				width: 100%;
-				text-align: center;
-				font-size: 14px;
-				padding: 12px 15px;
-				border-bottom: 1px solid rgba(255, 255, 255, 0.1);
-			}
-			
-            nav a:last-child {
-     			border-bottom: none;
-            }
-	
-        }
+    /* 3. Style the Menu List (Hidden by default) */
+    nav ul {
+        display: none; /* Hidden */
+        flex-direction: column;
+        width: 100%;
+        position: absolute;
+        top: 100%; /* Just below the nav bar */
+        left: 0;
+        background: #121212;
+        padding: 0;
+        margin: 0;
+        box-shadow: 0 4px 6px rgba(0,0,0,0.2);
+        z-index: 100;
+        opacity: 0;
+        transform: translateY(-20px);
+        transition: all 0.3s ease-in-out;
+    }
+
+    /* 4. The Magic: When checkbox is checked, show menu */
+    .nav-toggle:checked ~ ul {
+        display: flex;
+        opacity: 1;
+        transform: translateY(0);
+    }
+
+    /* 5. Turn Hamburger into 'X' when checked */
+    .nav-toggle:checked + label::before {
+        top: 12px;
+        transform: rotate(45deg);
+    }
+    .nav-toggle:checked + label::after {
+        bottom: 12px;
+        transform: rotate(-45deg);
+    }
+    .nav-toggle:checked + label span {
+        opacity: 0;
+    }
+
+    /* 6. Style the links for mobile */
+    nav ul li {
+        width: 100%;
+        border-bottom: 1px solid rgba(255,255,255,0.1);
+    }
+
+    nav a {
+        display: block;
+        width: 100%;
+        text-align: center;
+        padding: 15px;
+        font-size: 14px;
+    }
+
+    nav a:hover {
+        background-color: var(--color-primary);
+    }
+
+    /* Optional: Adjust header text for mobile */
+    header h1 { font-size: 2rem; }
+    header p { font-size: 1.1rem; }
+    .hero-section { padding: 40px 20px; }
+    .hero-section h2 { font-size: 1.7rem; }
+    .content-grid { grid-template-columns: 1fr; }
+}
