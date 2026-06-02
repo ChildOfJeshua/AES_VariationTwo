@@ -364,33 +364,33 @@
 
     /* Hide the button on desktop */
     @media (min-width: 769px) {
-        .nav-toggle-btn {
-            display: none !important;
-        }
+        .menu-btn { display: none; }
     }
 
-    /* 2. Style the Menu (Hidden by default) */
+    /* 2. The Menu List (Hidden by default on mobile) */
     nav ul {
-        display: none; /* Hidden */
+        display: none; /* HIDDEN! Keeps nav slim */
         flex-direction: column;
         position: absolute;
-        top: 100%; /* Start right below the nav bar */
+        top: 100%; /* Starts exactly below the nav bar */
         left: 0;
         width: 100%;
         background: #121212;
         padding: 0;
         margin: 0;
-        box-shadow: 0 4px 6px rgba(0,0,0,0.2);
-        z-index: 100;
-        animation: slideDown 0.3s ease-in-out;
+        box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+        z-index: 99; /* Below the button */
+        max-height: 80vh; /* Prevents it from being too tall */
+        overflow-y: auto; /* Scrollable if too many links */
     }
 
-    /* 3. Show menu when 'active' class is added */
+    /* 3. Show Menu when 'active' class is added */
     nav ul.active {
         display: flex;
+        animation: slideDown 0.3s ease;
     }
 
-    /* 4. Style the Links for Mobile */
+    /* 4. Link Styling */
     nav ul li {
         width: 100%;
         border-bottom: 1px solid rgba(255,255,255,0.1);
@@ -401,7 +401,9 @@
         width: 100%;
         text-align: center;
         padding: 15px;
-        font-size: 14px;
+        font-size: 16px;
+        color: var(--color-light);
+        text-decoration: none;
     }
 
     nav a:hover {
@@ -414,7 +416,7 @@
         to { opacity: 1; transform: translateY(0); }
     }
 
-    /* Keep your other mobile styles */
+    /* 6. Other Mobile Adjustments */
     header h1 { font-size: 2rem; }
     header p { font-size: 1.1rem; }
     .hero-section { padding: 40px 20px; }
