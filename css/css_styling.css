@@ -346,84 +346,51 @@
         
 	/* Mobile Device Specifics */
 @media (max-width: 768px) {
-    /* 1. Hide the checkbox input */
-    .nav-toggle {
-        display: none;
-    }
-
-    /* 2. Create the "Hamburger" button using the label */
-    /* We use a pseudo-element on the label to draw the 3 lines */
-    label[for="nav-toggle"] {
-        display: block;
+    /* 1. Style the Toggle Button */
+    .nav-toggle-btn {
+        display: block !important; /* Force it to show */
         position: absolute;
-        top: 20px;
-        right: 25px;
-        width: 30px;
-        height: 25px;
+        top: 15px;
+        right: 20px;
+        background: none;
+        border: none;
+        color: var(--color-light);
+        font-size: 2rem;
         cursor: pointer;
         z-index: 101;
+        padding: 0;
+        line-height: 1;
     }
 
-    /* The 3 lines of the hamburger */
-    label[for="nav-toggle"]::before,
-    label[for="nav-toggle"]::after,
-    label[for="nav-toggle"] span {
-        content: '';
-        position: absolute;
-        width: 100%;
-        height: 3px;
-        background: var(--color-light);
-        border-radius: 2px;
-        transition: 0.3s;
+    /* Hide the button on desktop */
+    @media (min-width: 769px) {
+        .nav-toggle-btn {
+            display: none !important;
+        }
     }
 
-    /* Position the 3 lines */
-    label[for="nav-toggle"]::before { top: 5px; }
-    label[for="nav-toggle"]::after { bottom: 5px; }
-    label[for="nav-toggle"] span { top: 12px; }
-
-    /* Hide the actual label text if it exists */
-    label[for="nav-toggle"] span { display: none; }
-
-    /* 3. Style the Menu List (Hidden by default) */
+    /* 2. Style the Menu (Hidden by default) */
     nav ul {
         display: none; /* Hidden */
         flex-direction: column;
-        width: 100%;
         position: absolute;
-        top: 100%; /* Just below the nav bar */
+        top: 100%; /* Start right below the nav bar */
         left: 0;
+        width: 100%;
         background: #121212;
         padding: 0;
         margin: 0;
         box-shadow: 0 4px 6px rgba(0,0,0,0.2);
         z-index: 100;
-        opacity: 0;
-        transform: translateY(-20px);
-        transition: all 0.3s ease-in-out;
+        animation: slideDown 0.3s ease-in-out;
     }
 
-    /* 4. The Magic: When checkbox is checked, show menu */
-    .nav-toggle:checked ~ ul {
+    /* 3. Show menu when 'active' class is added */
+    nav ul.active {
         display: flex;
-        opacity: 1;
-        transform: translateY(0);
     }
 
-    /* 5. Turn Hamburger into 'X' when checked */
-    .nav-toggle:checked + label::before {
-        top: 12px;
-        transform: rotate(45deg);
-    }
-    .nav-toggle:checked + label::after {
-        bottom: 12px;
-        transform: rotate(-45deg);
-    }
-    .nav-toggle:checked + label span {
-        opacity: 0;
-    }
-
-    /* 6. Style the links for mobile */
+    /* 4. Style the Links for Mobile */
     nav ul li {
         width: 100%;
         border-bottom: 1px solid rgba(255,255,255,0.1);
@@ -441,7 +408,13 @@
         background-color: var(--color-primary);
     }
 
-    /* Optional: Adjust header text for mobile */
+    /* 5. Animation */
+    @keyframes slideDown {
+        from { opacity: 0; transform: translateY(-10px); }
+        to { opacity: 1; transform: translateY(0); }
+    }
+
+    /* Keep your other mobile styles */
     header h1 { font-size: 2rem; }
     header p { font-size: 1.1rem; }
     .hero-section { padding: 40px 20px; }
