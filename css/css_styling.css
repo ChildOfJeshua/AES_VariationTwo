@@ -296,11 +296,11 @@ footer a:hover {
 /* --- MOBILE STYLES (768px AND BELOW) --- */
 @media (max-width: 768px) {
     
-    /* --- NAVIGATION (Hamburger & Menu) --- */
+    /* 1. The Custom Hamburger Button */
     .mobile-toggle {
         display: block !important;
         position: absolute;
-        top: 18px;
+        top: 18px; /* Adjusted for better vertical center */
         right: 25px;
         width: 30px;
         height: 22px;
@@ -309,47 +309,53 @@ footer a:hover {
         cursor: pointer;
         z-index: 101;
         padding: 0;
+        /* Hide default button styling */
         -webkit-appearance: none;
         appearance: none;
     }
 
+    /* The 3 Lines (Bars) */
     .mobile-toggle .bar {
         display: block;
         width: 100%;
         height: 3px;
         background-color: var(--color-light);
-        margin: 5px 0;
+        margin: 5px 0; /* Spacing between lines */
         border-radius: 2px;
         transition: all 0.3s ease-in-out;
     }
 
+    /* 2. Transform to 'X' when Active */
     .mobile-toggle.active .bar:nth-child(1) {
         transform: translateY(8px) rotate(45deg);
-        background-color: var(--color-primary);
+        background-color: var(--color-primary); /* Highlight color on X */
     }
+
     .mobile-toggle.active .bar:nth-child(2) {
         opacity: 0;
     }
+
     .mobile-toggle.active .bar:nth-child(3) {
         transform: translateY(-8px) rotate(-45deg);
         background-color: var(--color-primary);
     }
 
+    /* 3. The Menu List (Hidden by default) */
     nav ul {
         display: none;
         flex-direction: column;
         position: absolute;
-        top: 100%;
+        top: 100%; /* Starts exactly below the nav bar */
         left: 0;
         width: 100%;
-        background: #121212;
+        background: #121212; /* Match nav bg */
         padding: 0;
         margin: 0;
-        box-shadow: 0 10px 20px rgba(0,0,0,0.5);
+        box-shadow: 0 10px 20px rgba(0,0,0,0.5); /* Deep shadow for depth */
         z-index: 100;
-        border-top: 1px solid rgba(255,255,255,0.1);
-        justify-content: center;
-        align-items: center;
+        border-top: 1px solid rgba(255,255,255,0.1); /* Subtle top border */
+        
+        /* Smooth Slide Down Animation */
         opacity: 0;
         transform: translateY(-20px);
         transition: opacity 0.3s ease, transform 0.3s ease;
@@ -357,137 +363,69 @@ footer a:hover {
         overflow-y: auto;
     }
 
+    /* 4. Show Menu when 'active' class is added */
     nav ul.active {
         display: flex;
         opacity: 1;
         transform: translateY(0);
     }
 
+    /* 5. Styling the Links */
     nav ul li {
         width: 100%;
-        border-bottom: 1px solid rgba(255, 255, 255, 0.08);
-        display: flex;
-        justify-content: center;
+        border-bottom: 1px solid rgba(255, 255, 255, 0.08); /* Very subtle divider */
+    }
+
+    nav ul li:last-child {
+        border-bottom: none;
     }
 
     nav a {
         display: block;
         width: 100%;
         text-align: center;
-        padding: 18px 0;
-        font-size: 18px;
+        padding: 18px 0; /* More vertical breathing room */
+        font-size: 18px; /* Slightly larger for mobile readability */
         color: var(--color-light);
         text-decoration: none;
         transition: background-color 0.3s ease, color 0.3s ease;
         font-weight: 500;
     }
 
+    /* 6. Hover Effects (Touch-friendly) */
     nav a:hover {
-        background-color: rgba(230, 185, 29, 0.1);
+        background-color: rgba(230, 185, 29, 0.1); /* Subtle gold tint */
         color: var(--color-primary);
     }
 
-    /* --- HEADER & HERO SECTION (EXPLICIT CENTERING) --- */
-    
-    /* Force Header Text to Center */
-    header {
-        text-align: center !important; /* Ensures the whole header block is centered */
+    /* 7. Other Mobile Adjustments */
+    header h1 
+    { 
+        font-size: 3.5rem; 
+        line-height: 1.1; 
     }
-
-    header h1 {
-        font-size: 3.5rem;
-        line-height: 1.1;
-        text-align: center; /* Explicitly center the H1 */
-        margin: 0 auto;    /* Centers the block if it has width */
-    }
-
-    header p {
-        font-size: 3.2rem;
-        line-height: 1.2;
+    header p 
+    { 
+        font-size: 3.2rem; 
+        line-height: 1.2; 
         margin-bottom: 10px;
-        text-align: center; /* Explicitly center the P */
-        margin: 0 auto;
     }
-
-    .tagline {
-        font-size: 1.1rem;
-        margin-top: 15px;
-        text-align: center; /* Explicitly center the tagline */
-        margin: 0 auto;
+    .tagline 
+    { 
+        font-size: 1.1rem; 
+        margin-top: 15px; 
     }
-
-    /* Force Hero Section Text to Center */
-    .hero-section {
-        padding: 40px 20px;
-        text-align: center !important; /* Force the whole section to center */
+    .hero-section 
+    { 
+        padding: 40px 20px; 
     }
-
-    .hero-section h2 {
-        font-size: 2.2rem;
-        text-align: center; /* Explicitly center H2 */
-        margin: 0 auto 20px;
+    .hero-section h2 
+    { 
+        font-size: 2.2rem; 
     }
-
-    .hero-section p {
-        font-size: 1.17rem; /* Keep your original size or adjust if needed */
-        color: var(--color-light);
-        max-width: 777px;
-        margin: 0 auto 20px; /* Center the paragraph block */
-        line-height: 1.8;
-        text-align: center; /* Explicitly center the text */
-    }
-
-    /* Force Card Text to Center (Inside Content Grid) */
-    .card {
-        text-align: center !important; /* Center everything inside the card */
-        padding: 35px 20px; /* Slightly less padding on sides for mobile */
-    }
-
-    .card h3 {
-        font-size: 1.5rem;
-        text-align: center;
-        margin-bottom: 15px;
-    }
-
-    .card p {
-        font-size: 1.1rem; /* Slightly smaller for mobile readability */
-        text-align: center;
-        margin-bottom: 15px;
-    }
-
-    .card ul {
-        text-align: center;
-        margin: 0 auto 15px; /* Center the list block */
-    }
-
-    .card li {
-        margin-bottom: 8px;
-        list-style-type: none; /* Remove bullets if they mess up centering */
-    }
-
-    /* Force Content Grid to 1 Column and Center */
-    .content-grid {
-        grid-template-columns: 1fr;
-        text-align: center; /* Center the grid items if they are inline */
-    }
-    
-    /* Ensure the grid container itself is centered if it has max-width */
-    main {
-        text-align: center;
-    }
-
-    /* --- FOOTER --- */
-    footer {
-        text-align: center;
-    }
-    
-    footer p {
-        text-align: center;
-    }
-
-    .social-links {
-        text-align: center;
-        margin-top: 20px;
+    .content-grid 
+    { 
+        grid-template-columns: 1fr; 
     }
 }
 
