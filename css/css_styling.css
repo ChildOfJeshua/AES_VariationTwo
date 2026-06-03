@@ -398,6 +398,11 @@ footer a:hover {
         color: var(--color-primary);
     }
 
+    header {
+        background-attachment: scroll !important;
+        background-position: center top;
+        padding: 180px 20px;
+    }
     /* 7. Other Mobile Adjustments */
     header h1 
     { 
