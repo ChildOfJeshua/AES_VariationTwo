@@ -522,32 +522,24 @@
         background-color: rgba(230, 185, 29, 0.1);
         color: var(--color-primary);
     }
-            header h1 {
-                font-size: 2rem;
-            }
+    header h1 {
+        font-size: 2rem;
+    }
             
-            header p {
-                font-size: 1.1rem;
-            }
+    header p {
+        font-size: 1.1rem;
+    }
             
-            .hero-section {
-                padding: 40px 20px;
-            }
+    .hero-section {
+        padding: 40px 20px;
+    }
             
-            .hero-section h2 {
-                font-size: 1.7rem;
-            }
-            
-            nav ul {
-                flex-direction: column;
-            }
-            
-            nav a {
-                text-align: center;
-            }
-            
-            .content-grid {
-                grid-template-columns: 1fr;
-            }
+	.hero-section h2 {
+    	font-size: 1.7rem;
+    }
+
+    .content-grid {
+        grid-template-columns: 1fr;
+    }
 	
-        }
+}
