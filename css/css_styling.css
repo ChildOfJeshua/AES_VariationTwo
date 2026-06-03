@@ -400,8 +400,10 @@ footer a:hover {
 
     header {
         background-attachment: scroll !important;
-        background-position: center top;
+        background-position: center top !important;
+        background-repeat: no repeat !important;
         padding: 180px 20px;
+
     }
     /* 7. Other Mobile Adjustments */
     header h1 
