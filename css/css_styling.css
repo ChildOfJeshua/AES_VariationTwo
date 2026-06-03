@@ -407,11 +407,11 @@ footer a:hover {
             }
             
     header p {
-                font-size: 1.1rem;
+                font-size: 1.3rem;
             }
 
     header .tagline {
-                font-size: 0.7rem;
+                font-size: 1.1rem;
         }
     
     main .hero-section {
@@ -419,15 +419,15 @@ footer a:hover {
             }
             
     main .hero-section h2 {
-                font-size: 1.7rem;
+                font-size: 1.8rem;
             }
 
     main .hero-section p {
-                font-size: 1.1rem;
+                font-size: 1.15rem;
             }
 
-    main .hero-section .bibleverse {
-                font-size: 0.7rem;
+    main .hero-section .bible-verse {
+                font-size: 1.1rem;
             }
     main .content-grid {
                 grid-template-columns: 1fr;
