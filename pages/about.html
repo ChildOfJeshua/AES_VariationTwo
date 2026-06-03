@@ -180,5 +180,17 @@
             <a href="#terms">Terms of Service</a>
         </p>
     </footer>
+
+<script>
+  const btn = document.getElementById('mobile-menu-btn');
+  const navList = document.querySelector('nav ul');
+
+  btn.addEventListener('click', () => {
+    // Toggle the 'active' class on BOTH the button and the menu
+    btn.classList.toggle('active');
+    navList.classList.toggle('active');
+  });
+</script>
+	
 </body>
 </html>
