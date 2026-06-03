@@ -398,16 +398,17 @@ footer a:hover {
         color: var(--color-primary);
     }
 
+    /* 7. Other Mobile Adjustments */
     header h1 
     { 
         font-size: 3.5rem; 
-        line-height: 0.1;
+        line-height: 1.1; 
     }
     header p 
     { 
-        font-size: 1.2rem; 
+        font-size: 3.2rem; 
+        line-height: 1.2; 
         margin-bottom: 10px; 
-        text-align: center;
     }
     .tagline 
     { 
@@ -420,7 +421,7 @@ footer a:hover {
     }
     .hero-section h2 
     { 
-        font-size: 2.2rem;
+        font-size: 2.2rem; 
     }
     .content-grid 
     { 
