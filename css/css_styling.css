@@ -431,7 +431,7 @@ footer a:hover {
     /* 4. HERO SECTION (H2 and P Sizing & Centering) */
     .hero-section {
         padding: 40px 20px;
-        text-align: center !important; /* Force center */
+        text-align: left !important; /* Force center */
         margin-bottom: 30px; /* Add spacing below hero */
     }
 
