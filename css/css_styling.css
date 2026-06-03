@@ -414,22 +414,22 @@ footer a:hover {
                 font-size: 0.7rem;
         }
     
-    .hero-section {
+    main .hero-section {
                 padding: 40px 20px;
             }
             
-    .hero-section h2 {
+    main .hero-section h2 {
                 font-size: 1.7rem;
             }
 
-    .hero-section p {
+    main .hero-section p {
                 font-size: 1.1rem;
             }
 
-    .hero-section .bibleverse {
+    main .hero-section .bibleverse {
                 font-size: 0.7rem;
             }
-    .content-grid {
+    main .content-grid {
                 grid-template-columns: 1fr;
             }
 
