@@ -149,21 +149,13 @@
     </footer>
 
 <script>
-  // Select the button and the menu list
-  const menuBtn = document.getElementById('mobile-menu-btn');
+  const btn = document.getElementById('mobile-menu-btn');
   const navList = document.querySelector('nav ul');
 
-  // Add click event to toggle menu
-  menuBtn.addEventListener('click', () => {
-    // Toggle the 'active' class on the menu
+  btn.addEventListener('click', () => {
+    // Toggle the 'active' class on BOTH the button and the menu
+    btn.classList.toggle('active');
     navList.classList.toggle('active');
-    
-    // Change icon from ☰ to ✖ (or back)
-    if (navList.classList.contains('active')) {
-      menuBtn.innerHTML = '✖';
-    } else {
-      menuBtn.innerHTML = '☰';
-    }
   });
 </script>
 </body>
