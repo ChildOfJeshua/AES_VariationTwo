@@ -1,14 +1,14 @@
 /* --- GLOBAL RESET & VARIABLES --- */
 .mobile-toggle {
-    		display: none; /* HIDDEN BY DEFAULT ON ALL SCREENS */
+    display: none; /* HIDDEN BY DEFAULT ON ALL SCREENS */
 }
-/* Applies uniform resetting clean up to all elements */
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-        
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
 	/* Creation and setting of variables to color values */
         :root {
 		--color-primary: #e6b91d;
