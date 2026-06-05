@@ -532,9 +532,10 @@
 		flex-direction: column;
 		align-items: center;
 		gap: 10px;
+		
 	}
 
-    header h1 {
+    .header .container h1 {
         font-size: 2rem;
 		margin-bottom: 0.5rem;
 		line-height: 1.2;
