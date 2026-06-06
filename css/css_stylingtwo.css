@@ -2,38 +2,38 @@
 .mobile-toggle {
     display: none; /* HIDDEN BY DEFAULT ON ALL SCREENS */
 }
-       /* Applies uniform resetting clean up to all elements */
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-        
-        /* Creation and setting of variables to color values */
-        :root {
-            --color-primary: #e6b91d;
-            --color-primary-dark: #d1a005;
-            --color-primary-light: #fff9e4;
-            --color-meteorite: #ffdb85;
-            --color-dark: #1d1e20;
-            --color-gray: #727586;
-            --color-gray-light: #f2f3f6;
-            --color-light: #fff;
-            --color-success: #00b090;
-            --color-warning: #ffcd35;
-        }
 
-	/* navigation stick above page & styling */
-        nav {
-            background-color: var(--color-dark);
-	    	opacity: 0.87
-            padding: 0;
-            position: sticky;
-            top: 0;
-            z-index: 100;
-            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-        }
-        
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --color-primary: #e6b91d;
+    --color-primary-dark: #d1a005;
+    --color-primary-light: #fff9e4;
+    --color-meteorite: #ffdb85;
+    --color-dark: #1d1e20;
+    --color-gray: #727586;
+    --color-gray-light: #f2f3f6;
+    --color-light: #fff;
+    --color-success: #00b090;
+    --color-warning: #ffcd35;
+}
+
+/* --- NAVIGATION STYLES (DESKTOP & MOBILE BASE) --- */
+nav {
+    background: #121212;
+    opacity: 0.87;
+    padding: 0;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    font-family: "College", "Georgia", "Times New Roman", serif;
+    width: 100%;
+}
 	/* Sets the navigation bar horizontally */
         nav ul {
             list-style: none;
