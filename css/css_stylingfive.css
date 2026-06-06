@@ -209,7 +209,7 @@
 	.social-links a: hover img {
 		filter: brightness(1.2);
 	}
-/* --- MOBILE STYLES (768px AND BELOW) --- */
+
 @media (max-width: 768px) {
     
     /* --- CRITICAL FIX FOR BACKGROUND ZOOMING --- */
@@ -399,5 +399,6 @@
 	}
 	
         }
+
 
 
