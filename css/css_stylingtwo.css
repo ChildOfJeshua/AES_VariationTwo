@@ -401,134 +401,141 @@ footer a:hover {
     nav a:hover {
         background-color: rgba(230, 185, 29, 0.1);
         color: var(--color-primary);
-    }
-    .header {
-        padding: 60px 0;
-    }
-    
-    .header h1 {
-                font-size: 2rem;
-                margin-bottom: 15px;
-                line-height: 1.2;
-    }
-            
-    .header p {
-                font-size: 1.3rem;
-                line-height: 1.5;
-                max-width: 600px;
-                margin: 0 auto;
-    }
-    .header .tagline {
-                font-size: 1.07rem;
-    }
+    }  /* --- Header Section --- */
+  .header {
+    text-align: center;
+    padding: 60px 20px;
+  }
 
-    .about-section {
-        padding: 40px 0;
-    }
+  .header h1 {
+    font-size: 2rem;
+    margin-bottom: 10px;
+  }
 
-    .section-title {
-        font-size: 1.75rem;
-        text-align: center;
-        margin-bottom: 20px;
-        line-height: 1.3;
-    }
-    .about-content {
-        display: flex;
-        flex-direction: column;
-        gap: 20px;
-    }
-    .about-text {
-        width: 100%;
-        font-size: 1rem;
-        line-height: 1.6;
-        margin: 0;
-    }
-    .mission-section {
-        padding: 40px 0;
-    }
-    .section-title {
-        font-size: 1.75rem;
-        text-align: center;
-        margin-bottom: 25px;
-        line-height: 1.3;
-    }
-    .mission-grid {
-        display: grid;
-        grid-template-columns: 1fr;
-        gap: 20px;
-        width: 100%;
-    }
+  .header p {
+    font-size: 1.1rem;
+  }
 
-    .mission-card {
-        padding: 20px;
-        text-align: center;
-    }
+  /* --- About Section (Our Story) --- */
+  .about-section {
+    padding: 40px 0;
+  }
 
-    .mission-icon {
-        font-size: 2rem;
-        margin-bottom: 10px;
-        display: inline-block;
-    }
+  .section-title {
+    font-size: 1.8rem;
+    text-align: center;
+    margin-bottom: 20px;
+  }
 
-    .mission-card h3 {
-        font-size: 1.25rem;
-        margin-bottom: 10px;
-    }
-    
-    .mission-card p {
-        font-size: 0.95rem;
-        line-height: 1.5;
-    }
+  .about-content {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+  }
 
-    .container {
-        padding: 0 15px;
-    }
-    
-    .team-section {
-        padding: 40px 0;
-    }
+  .about-text {
+    order: 1; /* Text on top */
+  }
 
-    .section-title {
-        font-size: 1.75rem;
-        text-align: center;
-        margin-bottom: 30px;
-        line-height: 1.3;
-    }
+  .about-image {
+    order: 2; /* Image on bottom */
+    text-align: center;
+  }
 
-    .team-grid {
-        display: grid;
-        grid-template-columns: 1fr;
-        gap: 25px;
-        width: 100%;
-    }
-    
-    .team-member {
-        padding: 20px;
-        text-align: center;
-    }
+  .about-image img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 8px;
+  }
 
-    .team-member img {
-        width: 120px;
-        height: 120px;
-        border-radius: 50%;
-        object-fit: cover;
-        margin-bottom: 15px;
-    }
+  .about-text h2 {
+    font-size: 1.6rem;
+    margin-top: 0;
+  }
 
-    .team-member h3 {
-        font-size: 1.25rem;
-        margin-bottom: 5px;
-    }
+  .about-text p {
+    line-height: 1.6;
+    font-size: 1rem;
+  }
 
-    .team-memmber p {
-        font-size: 0.95rem;
-        margin-bottom: 10px;
-    }
-    
-    .container {
-        padding: 0 15px;
-    }
-    
+  /* --- Mission Section --- */
+  .mission-section {
+    padding: 40px 0;
+  }
+
+  .mission-grid {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  .mission-card {
+    text-align: center;
+    padding: 20px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+  }
+
+  .mission-icon {
+    font-size: 2rem;
+    margin-bottom: 10px;
+  }
+
+  /* --- Team Section --- */
+  .team-section {
+    padding: 40px 0;
+  }
+
+  .team-grid {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+  }
+
+  .team-member {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .team-image {
+    width: 100%;
+    max-width: 250px; /* Limit image size on mobile */
+    margin-bottom: 15px;
+  }
+
+  .team-image img {
+    width: 100%;
+    height: auto;
+    border-radius: 50%; /* Keep circular if desired, or remove */
+  }
+
+  .team-info h3 {
+    font-size: 1.4rem;
+    margin-bottom: 5px;
+  }
+
+  /* --- Contact Section --- */
+  .contact-section {
+    padding: 40px 0;
+  }
+
+  .contact-grid {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+  }
+
+  .contact-info {
+    text-align: center;
+  }
+
+  .social-links img {
+    width: 30px; /* Smaller icons for mobile */
+    height: 30px;
+    margin: 5px;
+  }
+
 @media (min-width: 769px) {
     .mobile-toggle {
         display: none !important;
