@@ -2,38 +2,36 @@
 .mobile-toggle {
     display: none; /* HIDDEN BY DEFAULT ON ALL SCREENS */
 }
-	/* Applies uniform resetting clean up to all elements */
+       /* Applies uniform resetting clean up to all elements */
         * {
             margin: 0;
             padding: 0;
             box-sizing: border-box;
         }
         
-	/* Creation and setting of variables to color values */
+        /* Creation and setting of variables to color values */
         :root {
-		--color-primary: #e6b91d;
-		--color-primary-dark: #d1a005;
-		--color-primary-light: #fff9e4;
-		--color-meteorite: #ffdb85;
-		--color-dark: #1d1e20;
-		--color-gray: #727586;
-		--color-gray-light: #f2f3f6;
-		--color-light: #fff;
-		--color-success: #00b090;
-		--color-warning: #ffcd35;
+            --color-primary: #e6b91d;
+            --color-primary-dark: #d1a005;
+            --color-primary-light: #fff9e4;
+            --color-meteorite: #ffdb85;
+            --color-dark: #1d1e20;
+            --color-gray: #727586;
+            --color-gray-light: #f2f3f6;
+            --color-light: #fff;
+            --color-success: #00b090;
+            --color-warning: #ffcd35;
         }
 
 	/* navigation stick above page & styling */
         nav {
- 	    background: #121212;
+            background-color: var(--color-dark);
 	    opacity: 0.87
             padding: 0;
             position: sticky;
             top: 0;
             z-index: 100;
             box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-	    font-family: "College", "Georgia", "Times New Roman", serif;
-
         }
         
 	/* Sets the navigation bar horizontally */
@@ -62,46 +60,31 @@
         }
         
 
-
-
-	/* main body edits for visual */
         body {
             font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
             color: var(--color-dark);
-            background-color: var(--color-light);
+            background: var(--color-light);
             line-height: 1.6;
-	    
         }
 
-
-  
         /* Header Section */
         .header {
             background-color: var(--color-dark);
             color: var(--color-light);
             padding: 60px 20px;
             text-align: center;
-
         }
 
         .header h1 {
-	    font-family: "College", "Georgia", "Times New Roman", serif;
             font-size: 48px;
             margin-bottom: 10px;
             font-weight: 700;
         }
 
         .header p {
-	    font-family: "College", "Georgia", "Times New Roman", serif;
             font-size: 18px;
             color: var(--color-meteorite);
         }
-
-        body {
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            line-height: 1.6;
-        }
-
 
         /* Container or Our Story*/
         .container {
@@ -112,7 +95,6 @@
 
         /* About Section */
         .about-section {
-	    font-family: "College", "Georgia", "Times New Roman", serif;
             padding: 60px 20px;
             background: var(--color-light);
         }
@@ -134,7 +116,7 @@
             transform: translateX(-50%);
             width: 80px;
             height: 4px;
-            background: var(--color-dark);
+            background: var(--color-primary);
             border-radius: 2px;
         }
 
@@ -154,7 +136,7 @@
 
         .about-text p {
             font-size: 16px;
-            color: var(--color-dark);
+            color: var(--color-gray);
             margin-bottom: 15px;
             line-height: 1.8;
         }
@@ -176,8 +158,7 @@
 
         /* Mission Section or Our Mission*/
         .mission-section {
-	    font-family: "College", "Georgia", "Times New Roman", serif;
-            background: #D3D3D3;
+            background: var(--color-primary-light);
             padding: 60px 20px;
         }
 
@@ -189,7 +170,7 @@
         }
 
         .mission-card {
-            background: var(--color-dark);
+            background: var(--color-light);
             padding: 30px;
             border-radius: 10px;
             text-align: center;
@@ -205,18 +186,17 @@
             font-size: 48px;
             margin-bottom: 15px;
             color: var(--color-primary);
-
         }
 
         .mission-card h3 {
             font-size: 20px;
-            color: var(--color-light);
+            color: var(--color-dark);
             margin-bottom: 10px;
         }
 
         .mission-card p {
             font-size: 14px;
-            color: var(--color-light);
+            color: var(--color-gray);
             line-height: 1.6;
         }
 
@@ -224,8 +204,6 @@
         .team-section {
             padding: 60px 20px;
             background: var(--color-light);
-	    font-family: "College", "Georgia", "Times New Roman", serif;
-
         }
 
         .team-grid {
@@ -263,13 +241,11 @@
         .team-info {
             padding: 20px;
             text-align: center;
-	    background: #121212;
         }
 
         .team-info h3 {
             font-size: 18px;
-            color: var(--color-light);
-	    background: #121212;
+            color: var(--color-dark);
             margin-bottom: 5px;
         }
 
@@ -281,8 +257,7 @@
 
         /* Contact Section or Get in Touch */
         .contact-section {
-	    font-family: "College", "Georgia", "Times New Roman", serif;
-            background: #D3D3D3;
+            background: var(--color-primary-light);
             padding: 60px 20px;
         }
 
@@ -294,7 +269,7 @@
         }
 
         .contact-info {
-            background: var(--color-dark);
+            background: var(--color-light);
             padding: 30px;
             border-radius: 10px;
             box-shadow: 0 2px 10px rgba(0, 0, 0, 0.08);
@@ -302,13 +277,13 @@
 
         .contact-info h3 {
             font-size: 20px;
-            color: var(--color-light);
+            color: var(--color-dark);
             margin-bottom: 20px;
         }
 
         .contact-info p {
             font-size: 14px;
-            color: var(--color-light);
+            color: var(--color-gray);
             margin-bottom: 15px;
         }
 
@@ -349,10 +324,9 @@
 
 
 
-
 	/* Footer below everything */
         footer {
- 	    background: #121212;
+            background-color: var(--color-dark);
             color: var(--color-light);
             padding: 40px 20px;
             text-align: center;
@@ -361,7 +335,6 @@
         
 	/* First paragraph of the footer section */
         footer p {
-	    font-family: "College", "Georgia", "Times New Roman", serif;
             margin-bottom: 10px;
             opacity: 0.9;
         }
@@ -404,7 +377,7 @@
 
         /* animation for the media links section */
         .social-links a:hover {
-            background-color: var(--color-light);
+            background-color: var(--color-meteorite);
 	    transform: scale(1.1);
         }
 
