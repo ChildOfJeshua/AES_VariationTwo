@@ -834,7 +834,6 @@
 
         
 /* Mobile Device Specifics */
-/* --- MOBILE STYLES (768px AND BELOW) --- */
 @media (max-width: 768px) {
     
     /* --- CRITICAL FIX FOR BACKGROUND ZOOMING --- */
@@ -1042,4 +1041,5 @@
      }
 
 }
+
 
