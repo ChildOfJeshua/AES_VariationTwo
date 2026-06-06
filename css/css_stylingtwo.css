@@ -433,11 +433,12 @@ footer a:hover {
                 grid-template-columns: 1fr;
             }
 
-/* Hide button on Desktop */
 @media (min-width: 769px) {
     .mobile-toggle {
         display: none !important;
     }
 }
+
+
 
 
