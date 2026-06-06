@@ -2,38 +2,40 @@
 .mobile-toggle {
     display: none; /* HIDDEN BY DEFAULT ON ALL SCREENS */
 }
+/* Applies uniform resetting clean up to all elements */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+	/* Creation and setting of variables to color values */
+        :root {
+		--color-primary: #e6b91d;
+		--color-primary-dark: #d1a005;
+		--color-primary-light: #fff9e4;
+		--color-meteorite: #ffdb85;
+		--color-dark: #1d1e20;
+		--color-gray: #727586;
+		--color-gray-light: #f2f3f6;
+		--color-light: #fff;
+		--color-success: #00b090;
+		--color-warning: #ffcd35;
+        }
 
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
+	/* navigation stick above page & styling */
+        nav {
+ 	    background: #121212;
+	    opacity: 0.87
+            padding: 0;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+	    font-family: "College", "Georgia", "Times New Roman", serif;
 
-:root {
-    --color-primary: #e6b91d;
-    --color-primary-dark: #d1a005;
-    --color-primary-light: #fff9e4;
-    --color-meteorite: #ffdb85;
-    --color-dark: #1d1e20;
-    --color-gray: #727586;
-    --color-gray-light: #f2f3f6;
-    --color-light: #fff;
-    --color-success: #00b090;
-    --color-warning: #ffcd35;
-}
-
-/* --- NAVIGATION STYLES (DESKTOP & MOBILE BASE) --- */
-nav {
-    background: #121212;
-    opacity: 0.87;
-    padding: 0;
-    position: sticky;
-    top: 0;
-    z-index: 100;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-    font-family: "College", "Georgia", "Times New Roman", serif;
-    width: 100%;
-}
+        }
+        
 	/* Sets the navigation bar horizontally */
         nav ul {
             list-style: none;
@@ -60,31 +62,46 @@ nav {
         }
         
 
+
+
+	/* main body edits for visual */
         body {
             font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
             color: var(--color-dark);
-            background: var(--color-light);
+            background-color: var(--color-light);
             line-height: 1.6;
+	    
         }
 
+
+  
         /* Header Section */
         .header {
             background-color: var(--color-dark);
             color: var(--color-light);
             padding: 60px 20px;
             text-align: center;
+
         }
 
         .header h1 {
+	    font-family: "College", "Georgia", "Times New Roman", serif;
             font-size: 48px;
             margin-bottom: 10px;
             font-weight: 700;
         }
 
         .header p {
+	    font-family: "College", "Georgia", "Times New Roman", serif;
             font-size: 18px;
             color: var(--color-meteorite);
         }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+        }
+
 
         /* Container or Our Story*/
         .container {
@@ -95,6 +112,7 @@ nav {
 
         /* About Section */
         .about-section {
+	    font-family: "College", "Georgia", "Times New Roman", serif;
             padding: 60px 20px;
             background: var(--color-light);
         }
@@ -102,8 +120,10 @@ nav {
         .section-title {
             font-size: 36px;
             color: var(--color-dark);
+            margin-bottom: 30px;
             text-align: center;
             position: relative;
+            padding-bottom: 15px;
         }
 
         .section-title::after {
@@ -114,7 +134,7 @@ nav {
             transform: translateX(-50%);
             width: 80px;
             height: 4px;
-            background: var(--color-primary);
+            background: var(--color-dark);
             border-radius: 2px;
         }
 
@@ -134,7 +154,7 @@ nav {
 
         .about-text p {
             font-size: 16px;
-            color: var(--color-gray);
+            color: var(--color-dark);
             margin-bottom: 15px;
             line-height: 1.8;
         }
@@ -156,7 +176,8 @@ nav {
 
         /* Mission Section or Our Mission*/
         .mission-section {
-            background: var(--color-primary-light);
+	    font-family: "College", "Georgia", "Times New Roman", serif;
+            background: #D3D3D3;
             padding: 60px 20px;
         }
 
@@ -168,7 +189,7 @@ nav {
         }
 
         .mission-card {
-            background: var(--color-light);
+            background: var(--color-dark);
             padding: 30px;
             border-radius: 10px;
             text-align: center;
@@ -184,17 +205,18 @@ nav {
             font-size: 48px;
             margin-bottom: 15px;
             color: var(--color-primary);
+
         }
 
         .mission-card h3 {
             font-size: 20px;
-            color: var(--color-dark);
+            color: var(--color-light);
             margin-bottom: 10px;
         }
 
         .mission-card p {
             font-size: 14px;
-            color: var(--color-gray);
+            color: var(--color-light);
             line-height: 1.6;
         }
 
@@ -202,6 +224,8 @@ nav {
         .team-section {
             padding: 60px 20px;
             background: var(--color-light);
+	    font-family: "College", "Georgia", "Times New Roman", serif;
+
         }
 
         .team-grid {
@@ -239,11 +263,13 @@ nav {
         .team-info {
             padding: 20px;
             text-align: center;
+	    background: #121212;
         }
 
         .team-info h3 {
             font-size: 18px;
-            color: var(--color-dark);
+            color: var(--color-light);
+	    background: #121212;
             margin-bottom: 5px;
         }
 
@@ -255,7 +281,8 @@ nav {
 
         /* Contact Section or Get in Touch */
         .contact-section {
-            background: var(--color-primary-light);
+	    font-family: "College", "Georgia", "Times New Roman", serif;
+            background: #D3D3D3;
             padding: 60px 20px;
         }
 
@@ -267,7 +294,7 @@ nav {
         }
 
         .contact-info {
-            background: var(--color-light);
+            background: var(--color-dark);
             padding: 30px;
             border-radius: 10px;
             box-shadow: 0 2px 10px rgba(0, 0, 0, 0.08);
@@ -275,13 +302,13 @@ nav {
 
         .contact-info h3 {
             font-size: 20px;
-            color: var(--color-dark);
+            color: var(--color-light);
             margin-bottom: 20px;
         }
 
         .contact-info p {
             font-size: 14px;
-            color: var(--color-gray);
+            color: var(--color-light);
             margin-bottom: 15px;
         }
 
@@ -322,9 +349,10 @@ nav {
 
 
 
+
 	/* Footer below everything */
         footer {
-            background-color: var(--color-dark);
+ 	    background: #121212;
             color: var(--color-light);
             padding: 40px 20px;
             text-align: center;
@@ -333,6 +361,7 @@ nav {
         
 	/* First paragraph of the footer section */
         footer p {
+	    font-family: "College", "Georgia", "Times New Roman", serif;
             margin-bottom: 10px;
             opacity: 0.9;
         }
@@ -373,15 +402,16 @@ nav {
 		transition: filter 0.3 ease;
 	}
 
-    /* animation for the media links section */
-    .social-links a:hover {
-        background-color: var(--color-meteorite);
+        /* animation for the media links section */
+        .social-links a:hover {
+            background-color: var(--color-light);
 	    transform: scale(1.1);
-    }
+        }
 
 	.social-links a: hover img {
 		filter: brightness(1.2);
 	}
+        
 /* --- MOBILE STYLES (768px AND BELOW) --- */
 @media (max-width: 768px) {
     
