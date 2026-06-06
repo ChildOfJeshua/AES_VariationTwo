@@ -1,3 +1,7 @@
+	/* --- GLOBAL RESET & VARIABLES --- */
+	.mobile-toggle {
+    	display: none; /* HIDDEN BY DEFAULT ON ALL SCREENS */
+	}
 
 	/* Applies uniform resetting clean up to all elements */
         * {
