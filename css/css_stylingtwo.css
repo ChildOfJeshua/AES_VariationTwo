@@ -25,15 +25,14 @@
 
 	/* navigation stick above page & styling */
         nav {
- 	    background: #121212;
-	    opacity: 0.87
+ 	    	background: #121212;
+	    	opacity: 0.87
             padding: 0;
             position: sticky;
             top: 0;
             z-index: 100;
             box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-	    font-family: "College", "Georgia", "Times New Roman", serif;
-
+			font-family: "College", "Georgia", "Times New Roman", serif;
         }
         
 	/* Sets the navigation bar horizontally */
