@@ -317,14 +317,20 @@
         background-color: rgba(230, 185, 29, 0.1);
         color: var(--color-primary);
     }
-    header h1 {
-                font-size: 2rem;
-            }
-            
-    header p {
-                font-size: 1.3rem;
-            }
-	
+	/* --- Header Section --- */
+  	.header {
+    	text-align: center;
+    	padding: 60px 20px;
+  	}
+
+  	.header h1 {
+    	font-size: 2rem;
+    	margin-bottom: 10px;
+  	}
+
+  	.header p {
+    	font-size: 1.1rem;
+  	}
 	.gallery-section {
 		
 		padding: 40px 15px;
