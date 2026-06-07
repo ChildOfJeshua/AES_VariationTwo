@@ -431,6 +431,33 @@
     .hero-section h2 {
         font-size: 1.7rem;
 	}
+	
+	.news-section {
+		padding: 40px 15px;
+	}
+
+	.news-grid {
+		gap: 24px;
+	}
+
+	.news-image {
+		height: 200px;
+	}
+
+	.news-content {
+		padding: 20px;
+	}
+
+	.news-content h3 {
+		font-size: 18px;
+		margin-bottom: 10px;
+	}
+
+	.news-content p {
+		font-size: 14px;
+		margin-bottom: 14px;
+	}
+	
     .content-grid {
         grid-template-columns: 1fr;
     }
