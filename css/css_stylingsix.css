@@ -1,4 +1,4 @@
-	/* --- GLOBAL RESET & VARIABLES --- */
+/* --- GLOBAL RESET & VARIABLES --- */
 	.mobile-toggle {
     	display: none; /* HIDDEN BY DEFAULT ON ALL SCREENS */
 	}
@@ -60,9 +60,6 @@
             background-color: var(--color-primary);
         }
         
-
-
-
 	/* main body edits for visual */
         body {
 	    font-family: "College", "Georgia", "Times New Roman", serif;
@@ -439,5 +436,6 @@
     }
 	
 }
+
 
 
