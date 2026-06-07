@@ -481,5 +481,36 @@
     }
     .content-grid {
         grid-template-columns: 1fr;
-    }	
+    }
+	.programs-section {
+		padding: 40px 15px;
+		max-width: 100%;
+	}
+	
+	.section-title {
+		font-size: 26px;
+		margin-bottom: 30px;
+	}
+
+	.programs-grid {
+		gap: 30px;
+	}
+
+	.program-category {
+		padding: 20px;
+	}
+
+	.program-category h2 {
+		font-size: 22px;
+		margin-bottom: 15px;
+	}
+
+	.program-item h3 {
+		font-size: 17px;
+	}
+
+	.program-item {
+		margin-bottom: 12px;
+		padding-bottom: 12px;
+	}
 }
