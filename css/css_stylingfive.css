@@ -317,92 +317,38 @@
         background-color: rgba(230, 185, 29, 0.1);
         color: var(--color-primary);
     }
-	/* --- Header Section --- */
-  	.header {
-    	text-align: center;
-    	padding: 60px 20px;
-  	}
+@media (max-width: 768px) {
+  .header {
+    padding: 60px 15px;
+    max-width: 100%; /* Optional: Let it span full width on mobile if preferred */
+  }
 
-  	.header h1 {
-    	font-size: 2rem;
-    	margin-bottom: 10px;
-  	}
+  .header h1 {
+    font-size: 32px; /* Slightly smaller H1 */
+    margin-bottom: 12px;
+  }
 
-  	.header p {
-    	font-size: 1.1rem;
-  	}
-	.gallery-section {
-		
-		padding: 40px 15px;
-	}
+  .header p {
+    font-size: 16px;
+  }
 
-	.gallery-section h2 {
-		font-size: 1.75rem;
-		text-align: center;
-		margin-bottom: 30px;
-	}
+  .gallery-footer-section {
+    padding: 40px 15px;
+  }
 
-	.gallery-grid {
-		display: grid;
-		grid-template-columns: 1fr'
-		gap: 20px; 
-		max-width: 100%;
-	}
+  .gallery-footer-icon {
+    width: 80px;
+    height: 80px;
+    font-size: 40px;
+  }
 
-	.gallery-item {
-		width: 100%;
-		background: fff;
-		border-radius: 8px;
-		overflow: hidden;
-		box-shadow: 0 2px 8px rgba(0,0,0.1);
-		transition: transform 0.2s ease;
-	}
+  .gallery-footer-section h2 {
+    font-size: 22px;
+  }
 
-	.gallery-item:hover {
-		transform: tranlateY(-4px);
-	}
-
-	.gallery-footer-section {
-		padding: 40px 15px;
-		text-align: center;
-	}
-
-	.gallery-footer-container {
-		display: flex;
-		flex-direction: column;
-		align-items: center;
-		gap: 20px;
-		max-width: 600px;
-		margin: 0 auto;
-	}
-
-	.gallery-footer-icon {
-		font-size: 3rem;
-		line-height: 1;
-		margin-bottom: 5px;
-	}
-
-	.gallery-footer-container h2 {
-		font-size: 1.5rem;
-		margin: 0;
-	}
-
-	.gallery-footer-container p {
-		font-size: 1rem;
-		margin: 0;
-		max-width: 400px;
-		line-height: 1.5;
-	}
-
-	.gallery-footer-container {
-		display: inline-block;
-		padding: 12px 24px;
-		border-radius: 6px;
-		font-weight: 600; 
-		font-size: 1rem;
-		margin-top: 10px;
-		transition: background-color 0.2 ease;
-	}
+  .gallery-footer-section p {
+    font-size: 15px;
+  }
 	
         }
 
