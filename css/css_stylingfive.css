@@ -317,7 +317,7 @@
         background-color: rgba(230, 185, 29, 0.1);
         color: var(--color-primary);
     }
-@media (max-width: 768px) {
+
   .header {
     padding: 60px 15px;
     max-width: 100%; /* Optional: Let it span full width on mobile if preferred */
