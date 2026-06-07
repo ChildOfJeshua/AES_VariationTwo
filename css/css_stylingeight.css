@@ -377,6 +377,9 @@
     .hero-section h2 {
         font-size: 1.7rem;
     }
+	.gallery-grid {
+		grid-template-columns: 1fr 1fr;
+	}
     .content-grid {
         grid-template-columns: 1fr;
     }
