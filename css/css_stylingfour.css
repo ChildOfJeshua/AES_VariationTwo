@@ -466,31 +466,20 @@
         color: var(--color-primary);
     }
 
+	/* --- Header Section --- */
+  	.header {
+    	text-align: center;
+    	padding: 60px 20px;
+  	}
 
-		.header {
-		padding: 40px 0;
-		text-align: center;
-	}
+  	.header h1 {
+    	font-size: 2rem;
+    	margin-bottom: 10px;
+  	}
 
-	.header .container {
-		display: flex;
-		flex-direction: column;
-		align-items: center;
-		gap: 10px;
-	}
-
-    header h1 {
-        font-size: 2rem;
-		margin-bottom: 0.5rem;
-		line-height: 1.2;
-    }
-            
-    header p {
-        font-size: 1.1rem;
-		opacity: 0.9;
-		max-width: 90%;
-    }
-
+  	.header p {
+    	font-size: 1.1rem;
+  	}
 	.programs-section {
 		padding: 20px 15px;
 	}
