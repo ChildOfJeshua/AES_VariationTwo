@@ -84,14 +84,14 @@
         }
 
         .header h1 {
-	    font-family: "College", "Georgia", "Times New Roman", serif;
+	    	font-family: "College", "Georgia", "Times New Roman", serif;
             font-size: 48px;
             margin-bottom: 10px;
             font-weight: 700;
         }
 
         .header p {
-	    font-family: "College", "Georgia", "Times New Roman", serif;
+	    	font-family: "College", "Georgia", "Times New Roman", serif;
             font-size: 18px;
             color: var(--color-meteorite);
         }
@@ -111,7 +111,7 @@
 
         /* About Section */
         .about-section {
-	    font-family: "College", "Georgia", "Times New Roman", serif;
+	    	font-family: "College", "Georgia", "Times New Roman", serif;
             padding: 60px 20px;
             background: var(--color-light);
         }
@@ -175,7 +175,7 @@
 
         /* Mission Section or Our Mission*/
         .mission-section {
-	    font-family: "College", "Georgia", "Times New Roman", serif;
+	    	font-family: "College", "Georgia", "Times New Roman", serif;
             background: #D3D3D3;
             padding: 60px 20px;
         }
@@ -223,7 +223,7 @@
         .team-section {
             padding: 60px 20px;
             background: var(--color-light);
-	    font-family: "College", "Georgia", "Times New Roman", serif;
+	    	font-family: "College", "Georgia", "Times New Roman", serif;
 
         }
 
@@ -262,13 +262,13 @@
         .team-info {
             padding: 20px;
             text-align: center;
-	    background: #121212;
+	    	background: #121212;
         }
 
         .team-info h3 {
             font-size: 18px;
             color: var(--color-light);
-	    background: #121212;
+	    	background: #121212;
             margin-bottom: 5px;
         }
 
@@ -280,7 +280,7 @@
 
         /* Contact Section or Get in Touch */
         .contact-section {
-	    font-family: "College", "Georgia", "Times New Roman", serif;
+	    	font-family: "College", "Georgia", "Times New Roman", serif;
             background: #D3D3D3;
             padding: 60px 20px;
         }
@@ -351,7 +351,7 @@
 
 	/* Footer below everything */
         footer {
- 	    background: #121212;
+ 	    	background: #121212;
             color: var(--color-light);
             padding: 40px 20px;
             text-align: center;
@@ -360,7 +360,7 @@
         
 	/* First paragraph of the footer section */
         footer p {
-	    font-family: "College", "Georgia", "Times New Roman", serif;
+	    	font-family: "College", "Georgia", "Times New Roman", serif;
             margin-bottom: 10px;
             opacity: 0.9;
         }
@@ -403,9 +403,9 @@
 
         /* animation for the media links section */
         .social-links a:hover {
-            background-color: var(--color-light);
+        background-color: var(--color-light);
 	    transform: scale(1.1);
-        }
+    }
 
 	.social-links a: hover img {
 		filter: brightness(1.2);
