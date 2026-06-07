@@ -518,21 +518,21 @@
     nav a:hover {
         background-color: rgba(230, 185, 29, 0.1);
         color: var(--color-primary);
-    }  /* --- Header Section --- */
-  .header {
-    text-align: center;
-    padding: 60px 20px;
-  }
+    }  
+	/* --- Header Section --- */
+  	.header {
+    	text-align: center;
+    	padding: 60px 20px;
+  	}
 
-  .header h1 {
-    font-size: 2rem;
-    margin-bottom: 10px;
-  }
+  	.header h1 {
+    	font-size: 2rem;
+    	margin-bottom: 10px;
+  	}
 
-  .header p {
-    font-size: 1.1rem;
-  }
-
+  	.header p {
+    	font-size: 1.1rem;
+  	}
   /* --- About Section (Our Story) --- */
   .about-section {
     padding: 40px 0;
