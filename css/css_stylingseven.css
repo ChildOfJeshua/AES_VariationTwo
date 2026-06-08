@@ -481,7 +481,6 @@
     }
 	.programs-section {
   		padding: 40px 15px;
-		grid-template-columns: 1fr;
 	}
 	.section-title {
 		font-size: 28px;
@@ -490,6 +489,8 @@
 
 	.programs-grid {
 		gap: 30px;
+		grid-template-columns: 1fr;
+
 	}
 
 	.program-category {
