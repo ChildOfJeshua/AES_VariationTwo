@@ -336,12 +336,6 @@
     padding: 40px 15px;
   }
 
-  .gallery-footer-icon {
-    width: 80px;
-    height: 80px;
-    font-size: 40px;
-  }
-
   .gallery-footer-section h2 {
     font-size: 22px;
   }
@@ -350,7 +344,7 @@
     font-size: 15px;
   }
 	
-        }
+}
 
 
 
