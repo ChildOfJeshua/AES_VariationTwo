@@ -479,11 +479,9 @@
     .hero-section h2 {
         font-size: 1.7rem;
     }
-    .content-grid {
-        grid-template-columns: 1fr;
-    }
 	.programs-section {
   		padding: 40px 15px;
+		grid-template-columns: 1fr;
 	}
 	.section-title {
 		font-size: 28px;
