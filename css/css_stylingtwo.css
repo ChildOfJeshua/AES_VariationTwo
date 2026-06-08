@@ -520,19 +520,18 @@
         color: var(--color-primary);
     }  
 	/* --- Header Section --- */
-  	.header {
-    	text-align: center;
-    	padding: 60px 20px;
-  	}
-
-  	.header h1 {
-    	font-size: 2rem;
-    	margin-bottom: 10px;
-  	}
-
-  	.header p {
-    	font-size: 1.1rem;
-  	}
+    header h1 {
+        font-size: 2rem;
+    }
+            
+    header p {
+        font-size: 1.1rem;
+    }
+            
+    .hero-section {
+        padding: 40px 20px;
+    }
+        
   /* --- About Section (Our Story) --- */
   .about-section {
     padding: 40px 0;
