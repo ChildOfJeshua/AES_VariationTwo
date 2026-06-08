@@ -436,12 +436,25 @@
 		padding: 40px 15px;
 	}
 
-	.news-grid {
-		gap: 24px;
+	.container {
+		max-width: 1200px;
+		margin: 0 auto;
 	}
 
+	.news-grid {
+		gap: 24px;
+		grid-template-columns: 1fr;
+		gap: 2rem;
+	}
+
+	.news-card {
+		display: flex;
+		flex-direction: column;
+	}
+	
 	.news-image {
 		height: 200px;
+		width: 100%;
 	}
 
 	.news-content {
@@ -454,8 +467,8 @@
 	}
 
 	.news-content p {
-		font-size: 14px;
-		margin-bottom: 14px;
+		line-height: 1.6;
+		margin-bottom: 1.5rem;
 	}
 	
     .content-grid {
