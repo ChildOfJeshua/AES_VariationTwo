@@ -519,19 +519,19 @@
         background-color: rgba(230, 185, 29, 0.1);
         color: var(--color-primary);
     }  
-	/* --- Header Section --- */
-	.header {
+/* --- Header Section --- */
+    .header {
 		padding: 60px 15px;
 		max-width: 100%;
 	}
 	
     .header h1 {
-        font-size: 32px;
+     		font-size: 32px;
 		max-bottom: 12px;
     }
             
-    .header p {
-        font-size: 16px;
+   .header p {
+        		font-size: 16px;
     }
          
   /* --- About Section (Our Story) --- */
@@ -659,6 +659,7 @@
         display: none !important;
     }
 }
+
 
 
 
