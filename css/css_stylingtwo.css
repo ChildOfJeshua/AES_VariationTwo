@@ -65,40 +65,32 @@
 
 	/* main body edits for visual */
         body {
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+	    font-family: "College", "Georgia", "Times New Roman", serif;
             color: var(--color-dark);
             background-color: var(--color-light);
             line-height: 1.6;
 	    
         }
 
-
-  
         /* Header Section */
         .header {
             background-color: var(--color-dark);
             color: var(--color-light);
             padding: 60px 20px;
             text-align: center;
-
         }
 
+	/* The size seting for the h1 within the header above the navigation */
         .header h1 {
-	    	font-family: "College", "Georgia", "Times New Roman", serif;
             font-size: 48px;
             margin-bottom: 10px;
             font-weight: 700;
         }
 
+        /* The size setting for the p within the header above the navigation */
         .header p {
-	    	font-family: "College", "Georgia", "Times New Roman", serif;
             font-size: 18px;
             color: var(--color-meteorite);
-        }
-
-        body {
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            line-height: 1.6;
         }
 
 
