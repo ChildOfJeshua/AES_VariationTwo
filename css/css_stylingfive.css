@@ -1,7 +1,4 @@
-/* --- GLOBAL RESET & VARIABLES --- */
-.mobile-toggle {
-    display: none; /* HIDDEN BY DEFAULT ON ALL SCREENS */
-}
+<style>
 	/* Applies uniform resetting clean up to all elements */
         * {
             margin: 0;
@@ -25,7 +22,7 @@
 
 	/* navigation stick above page & styling */
         nav {
- 	    background: #121212;
+            background-color: var(--color-dark);
 	    opacity: 0.87
             padding: 0;
             position: sticky;
@@ -64,7 +61,7 @@
 
 	/* main body edits for visual */
         body {
-	    font-family: "College", "Georgia", "Times New Roman", serif;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
             color: var(--color-dark);
             background-color: var(--color-light);
             line-height: 1.6;
@@ -91,10 +88,82 @@
             font-size: 18px;
             color: var(--color-meteorite);
         }
+
+
+	/*Gallery Styling Section */
+	 .gallery-container {
+            width: 100%;
+            min-height: 100vh;
+            background: #f9f9f9;
+            color: #333;
+            font-family: 'Arial', sans-serif;
+            overflow: hidden;
+        }
+
+        .gallery-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 20px;
+            padding: 40px;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .gallery-item {
+            background: #fff;
+            border-radius: 10px;
+            overflow: hidden;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+        }
+
+        .gallery-item:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 6px 20px rgba(0, 0, 0, 0.2);
+        }
+
+        .gallery-item img {
+            width: 100%;
+            height: 300px;
+            object-fit: cover;
+            border-radius: 10px 10px 0 0;
+        }
+
+        .gallery-item h3 {
+            font-size: 1.5rem;
+            margin: 20px 0 10px;
+            color: #673de6;
+            text-align: center;
+        }
+
+        .gallery-item p {
+            font-size: 1rem;
+            margin: 0 20px 20px;
+            color: #555;
+            text-align: center;
+        }
+
+        @media (max-width: 768px) {
+            .gallery-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+
+        @media (max-width: 480px) {
+            .gallery-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+
+
+
+
+
+
 	/* Section Below Gallery */
 	.gallery-footer-section {
     		width: 100%;
-            	background: #D3D3D3;
+    		background: var(--color-primary-light);
     		padding: 60px 20px;
     		text-align: center;
     		margin-top: 0;
@@ -125,7 +194,7 @@
 	.gallery-footer-button {
     		display: inline-block;
     		padding: 15px 40px;
-    		background: var(--color-dark);
+    		background: var(--color-primary);
     		color: var(--color-light);
     		text-decoration: none;
     		border-radius: 8px;
@@ -149,9 +218,11 @@
         
 
 
+
+
 	/* Footer below everything */
         footer {
- 	    background: #121212;
+            background-color: var(--color-dark);
             color: var(--color-light);
             padding: 40px 20px;
             text-align: center;
@@ -202,7 +273,7 @@
 
         /* animation for the media links section */
         .social-links a:hover {
-            background-color: var(--color-light);
+            background-color: var(--color-meteorite);
 	    transform: scale(1.1);
         }
 
@@ -210,141 +281,37 @@
 		filter: brightness(1.2);
 	}
 
-@media (max-width: 768px) {
-    
-    /* --- CRITICAL FIX FOR BACKGROUND ZOOMING --- */
-    header {
-        background-attachment: scroll !important; /* Stops the zoom/jump glitch */
-        background-position: center top !important; /* Locks image to top */
-        background-size: cover !important;
-        padding: 180px 20px; /* Adjusted padding for mobile view */
-    }
+        
+	/* Mobile Device Specifics */
 
-    /* 1. The Custom Hamburger Button */
-    .mobile-toggle {
-        display: block !important;
-        position: absolute;
-        top: 18px;
-        right: 25px;
-        width: 30px;
-        height: 22px;
-        background: none;
-        border: none;
-        cursor: pointer;
-        z-index: 101;
-        padding: 0;
-        -webkit-appearance: none;
-        appearance: none;
-    }
-
-    /* The 3 Lines (Bars) */
-    .mobile-toggle .bar {
-        display: block;
-        width: 100%;
-        height: 3px;
-        background-color: var(--color-light);
-        margin: 5px 0;
-        border-radius: 2px;
-        transition: all 0.3s ease-in-out;
-    }
-
-    /* Transform to 'X' */
-    .mobile-toggle.active .bar:nth-child(1) {
-        transform: translateY(8px) rotate(45deg);
-        background-color: var(--color-primary);
-    }
-    .mobile-toggle.active .bar:nth-child(2) {
-        opacity: 0;
-    }
-    .mobile-toggle.active .bar:nth-child(3) {
-        transform: translateY(-8px) rotate(-45deg);
-        background-color: var(--color-primary);
-    }
-
-    /* 2. The Menu List */
-    nav ul {
-        display: none;
-        flex-direction: column;
-        position: absolute;
-        top: 100%;
-        left: 0;
-        width: 100%;
-        background: #121212;
-        padding: 0;
-        margin: 0;
-        box-shadow: 0 10px 20px rgba(0,0,0,0.5);
-        z-index: 100;
-        border-top: 1px solid rgba(255,255,255,0.1);
-        justify-content: center;
-        align-items: center;
-        opacity: 0;
-        transform: translateY(-20px);
-        transition: opacity 0.3s ease, transform 0.3s ease;
-        max-height: 80vh;
-        overflow-y: auto;
-    }
-
-    nav ul.active {
-        display: flex;
-        opacity: 1;
-        transform: translateY(0);
-    }
-
-    nav ul li {
-        width: 100%;
-        border-bottom: 1px solid rgba(255, 255, 255, 0.08);
-        display: flex;
-        justify-content: center;
-    }
-
-    nav ul li:last-child {
-        border-bottom: none;
-    }
-
-    nav a {
-        display: block;
-        width: 100%;
-        text-align: center;
-        padding: 18px 0;
-        font-size: 18px;
-        color: var(--color-light);
-        text-decoration: none;
-        transition: background-color 0.3s ease, color 0.3s ease;
-        font-weight: 500;
-    }
-
-    nav a:hover {
-        background-color: rgba(230, 185, 29, 0.1);
-        color: var(--color-primary);
-    }
-
-  .header {
-    padding: 60px 15px;
-    max-width: 100%; /* Optional: Let it span full width on mobile if preferred */
-  }
-
-  .header h1 {
-    font-size: 32px; /* Slightly smaller H1 */
-    margin-bottom: 12px;
-  }
-
-  .header p {
-    font-size: 16px;
-  }
-
-  .gallery-footer-section {
-    padding: 40px 15px;
-  }
-
-  .gallery-footer-section h2 {
-    font-size: 22px;
-  }
-
-  .gallery-footer-section p {
-    font-size: 15px;
-  }
+        @media (max-width: 768px) {
+            header h1 {
+                font-size: 2rem;
+            }
+            
+            header p {
+                font-size: 1.1rem;
+            }
+            
+            .hero-section {
+                padding: 40px 20px;
+            }
+            
+            .hero-section h2 {
+                font-size: 1.7rem;
+            }
+            
+            nav ul {
+                flex-direction: column;
+            }
+            
+            nav a {
+                text-align: center;
+            }
+            
+            .content-grid {
+                grid-template-columns: 1fr;
+            }
 	
-}
-
-
-
+        }
+    </style>
