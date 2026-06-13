@@ -339,69 +339,57 @@
         }
 
 
+footer {
+    background-color: var(--color-gray-light);    
+    color: var(--color-dark);
+    padding: 40px 20px;
+    text-align: center;
+    margin-top: 5px;
+}
 
+footer p {
+    margin-bottom: 10px;
+    opacity: 0.9;
+}
 
-	/* Footer below everything */
-        footer {
- 	    	background: #121212;
-            color: var(--color-light);
-            padding: 40px 20px;
-            text-align: center;
-            margin-top: 5px;
-        }
-        
-	/* First paragraph of the footer section */
-        footer p {
-	    	font-family: "College", "Georgia", "Times New Roman", serif;
-            margin-bottom: 10px;
-            opacity: 0.9;
-        }
-        
-	/* Colors for as such at rest or non-engaged */
-        footer a {
-            color: var(--color-meteorite);
-            text-decoration: none;
-            transition: color 0.3s ease;
-        }
-        
-	/* animation for the footer section */
-        footer a:hover {
-            color: var(--color-primary-light);
-        }
-        
-	/* vertical spacing between footer information and button */
-        .social-links {
-            margin-top: 20px;
-        }
-        
-	/* Colors for as such at rest or non-engaged */
-        .social-links a {
-            display: inline-block;
-            margin: 0 10px;
-            padding: 8px;
-            background-color: var(--color-primary);
-            border-radius: 5px;
-            transition: background-color 0.3 ease, transform 0.3s ease;
-        }
+footer a {
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
 
-	/* animation for the social media links section on hover */
-	.social-links a img {
-		width: 24px;
-		height: 24px;
-		display: block;
-		filter: brightness(1);
-		transition: filter 0.3 ease;
-	}
+footer a:hover {
+    color: var(--color-primary-light);
+}
 
-        /* animation for the media links section */
-        .social-links a:hover {
-        background-color: var(--color-light);
-	    transform: scale(1.1);
-    }
+.social-links {
+    margin-top: 20px;
+}
 
-	.social-links a: hover img {
-		filter: brightness(1.2);
-	}
+.social-links a {
+    display: inline-block;
+    margin: 0 10px;
+    padding: 8px;
+    background-color: var(--color-primary);
+    border-radius: 5px;
+    transition: background-color 0.3 ease, transform 0.3s ease;
+}
+
+.social-links a img {
+    width: 24px;
+    height: 24px;
+    display: block;
+    filter: brightness(1);
+    transition: filter 0.3 ease;
+}
+
+.social-links a:hover {
+    background-color: var(--color-light);
+    transform: scale(1.1);
+}
+
+.social-links a:hover img {
+    filter: brightness(1.2);
+}
         
 /* --- MOBILE STYLES (768px AND BELOW) --- */
 @media (max-width: 768px) {
